@@ -1,0 +1,2 @@
+REPO YMLs
+http://github.com/ashokitschool/kubernetes_manifest_yml_files/tree/main/02-Blue-Green-Model

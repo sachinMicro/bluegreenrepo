@@ -1,0 +1,27 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+       name: javawebappgreendeployment
+spec:
+    replicas: 2
+    strategy:
+       type: RollingUpdate
+    selector:
+        matchLabels:
+             color: green
+             version: v2
+    template:
+         metadata:
+             name: java-web-app
+             labels:
+                color: green
+                version: v2   
+         spec: 
+            containers:
+                - name: java-web-app-cont-2
+                  image: sachinmicrodockerhub/demoapp:v2
+                  imagePullPolicy: Always
+                  ports:
+                    - containerPort: 8080            
+...

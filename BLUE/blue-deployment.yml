@@ -1,0 +1,27 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+   name: webappbluedeployment
+spec: 
+    replicas: 2   
+    strategy:
+         type: RollingUpdate
+    selector:
+      matchLabels:
+         color: blue
+         version: v1 
+    template:
+        metadata:
+             name: java-web-app 
+             labels:
+                color: blue
+                version: v1
+        spec:
+           containers:
+            - name: java-web-app-cont
+              image: sachinmicrodockerhub/demoapp:latest
+              imagePullPolicy: Always
+              ports:
+                - containerPort: 8080       
+...
