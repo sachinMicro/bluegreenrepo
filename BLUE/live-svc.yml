@@ -1,5 +1,5 @@
 ---
-version: v1
+apiVersion: v1
 kind: Service
 metadata:
        name: live-svc
@@ -10,4 +10,8 @@ spec:
     ports:
       - port: 80
         targetPort: 8080
+<<<<<<< HEAD
 ...
+=======
+...
+>>>>>>> 90865057ed6b0f36c8dfdd1f5c7c0a6d765052cf
